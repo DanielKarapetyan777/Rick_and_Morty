@@ -13,6 +13,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           backgroundColor: Colors.white,
         ),
-        home: const HomePage());
+        home: HomePage());
   }
 }
