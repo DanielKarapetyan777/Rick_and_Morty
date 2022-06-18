@@ -10,7 +10,7 @@ part 'character_state.dart';
 class CharacterBloc extends Bloc<UserEvent, UserState> {
   final CharacterRepository characterRepository;
   CharacterBloc(this.characterRepository) : super(UserLoadingState()) {
-    on((event, emit) async {
+    on<StartEvent>((event, emit) async {
       emit(UserLoadingState());
       try {
         final List<User> loudeduserlist =

@@ -3,11 +3,16 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../bloc/character_bloc.dart';
 
-class CharactersList extends StatelessWidget {
+class CharactersList extends StatefulWidget {
   const CharactersList({
     Key? key,
   }) : super(key: key);
 
+  @override
+  State<CharactersList> createState() => _CharactersListState();
+}
+
+class _CharactersListState extends State<CharactersList> {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<CharacterBloc, UserState>(

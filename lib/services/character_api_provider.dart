@@ -7,10 +7,10 @@ class CharacterProvider {
   //  https://rickandmortyapi.com/api/character
 
   Future<List<User>> getUser() async {
+    Dio dio = Dio();
+    final response = await dio.get('https://rickandmortyapi.com/api/character');
+    print(response);
     try {
-      final response =
-          await Dio().get('https://rickandmortyapi.com/api/character');
-      print(response);
       final List<dynamic> userjson = json.decode(response.data);
       return userjson.map((json) => User.fromJson(json)).toList();
     } catch (e) {

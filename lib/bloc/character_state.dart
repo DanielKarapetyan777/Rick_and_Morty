@@ -2,7 +2,7 @@ part of 'character_bloc.dart';
 
 abstract class UserState {}
 
-class UserInitial extends UserState {}
+//class UserInitial extends UserState {}
 
 class UserLoadingState extends UserState {}
 
